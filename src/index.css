@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+#eachList {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#listContainer {
+  justify-content: space-between;
+}
