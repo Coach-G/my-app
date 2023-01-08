@@ -3,28 +3,25 @@ import { useState } from 'react';
 function App() {
   const [inputText, setInputText] = useState('');
   const [inputArray, setInputArray] = useState([]);
-  
 
   function handleChange(e) {
-    console.log(e)
+    console.log(e);
     const newValueInput = e.target.value;
     setInputText(newValueInput);
   }
 
   function addText() {
-    if(inputText === "") {
-      alert("Empty")
-    }else{
-    setInputArray((prevText) => {
-      return [...prevText, inputText];
-    });
-    setInputText('');
+    if (inputText === '') {
+      alert('Empty');
+    } else {
+      setInputArray((prevText) => {
+        return [...prevText, inputText];
+      });
+      setInputText('');
+    }
   }
-}
 
   function deleleText(id) {
-
-   
     setInputArray((prevItems) => {
       return prevItems.filter((text, index) => {
         return index !== id;
@@ -38,7 +35,7 @@ function App() {
         <p id='title'>To do</p>
         <input type='text' onChange={handleChange} value={inputText} />
         <button onClick={addText}>Add</button>
-        <div id="listContainer">
+        <div id='listContainer'>
           {inputArray.map((list, id) => {
             return (
               <div id='eachList' onClick={() => deleleText(id)} key={id}>
